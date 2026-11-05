@@ -65,6 +65,15 @@ namespace RestaurantApp_Team_03_04_05
         static void ShowGoodRating()
         {
             Console.WriteLine("Not completed");
+            var goodRestaurants = restaurants
+        .Where(r => r.Rating >= 4.5);
+
+
+            foreach (var restaurant in goodRestaurants)
+            {
+                Console.WriteLine(restaurant.Name +
+                                  " คะแนน: " + restaurant.Rating);
+            }
         }
 
         // คน C รับผิดชอบ
