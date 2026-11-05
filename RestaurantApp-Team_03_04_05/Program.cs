@@ -15,11 +15,14 @@ namespace RestaurantApp_Team_03_04_05
 
     internal class Program
     {
-        static List<Restaurant> restaurants = new List<Restaurant>
+        static List<Restaurant> restaurants = new List<Restaurant> 
     {
         new Restaurant { Name = "Mcdonal's", Type = "Fast Food", Rating = 4.2 },
         new Restaurant { Name = "Teenoi", Type = "Suki", Rating = 4.7 },
-        new Restaurant { Name = "Fuji", Type = "Japanese", Rating = 4.8 }
+        new Restaurant { Name = "Fuji", Type = "Japanese", Rating = 4.8 },
+        new Restaurant { Name = "KFC", Type = "Fast Food", Rating = 3.5 },
+        new Restaurant { Name = "MK", Type = "Suki", Rating = 4.2 },
+        new Restaurant { Name = "Hachiban", Type = "Japanese", Rating = 5 },
     };
 
         static void Main(string[] args)
@@ -58,7 +61,10 @@ namespace RestaurantApp_Team_03_04_05
         // คน A รับผิดชอบ
         static void AddRestaurant()
         {
-            Console.WriteLine("Aroi jud");
+            foreach (var restaurant in restaurants)
+            {
+                Console.WriteLine(restaurant.Name+ " - " + restaurant.Type + " - " + restaurant.Rating);
+            }
         }
 
         // คน B รับผิดชอบ
